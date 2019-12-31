@@ -1,7 +1,7 @@
 # docker-goesproc
 dockerizing goestools for use in remote processing/error tolerance
 
-This image is very big due to including the OpenCV library as a dependency. This must be run as a privileged container.
+This image is very big due to including the OpenCV library as a dependency.
 
 Source can be found at https://github.com/pietern/goestools, with a full guide available at https://pietern.github.io/goestools/index.html.
 
