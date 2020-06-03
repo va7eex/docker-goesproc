@@ -1,0 +1,3 @@
+[submodule "lib/goestools"]
+	path = lib/goestools
+	url = https://github.com/pietern/goestools
