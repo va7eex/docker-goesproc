@@ -17,7 +17,7 @@ RUN apt update && apt upgrade -y && \
     libopencv-dev \
     zlib1g-dev \
     libproj-dev \
-    librtlsdr-dev \ #these next three are for the benefit of things built on this image
+    librtlsdr-dev \
     libairspy-dev \
     libhackrf-dev \
     tzdata && \
