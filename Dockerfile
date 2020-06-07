@@ -17,6 +17,9 @@ RUN apt update && apt upgrade -y && \
     libopencv-dev \
     zlib1g-dev \
     libproj-dev \
+    librtlsdr-dev \ #these next three are for the benefit of things built on this image
+    libairspy-dev \
+    libhackrf-dev \
     tzdata && \
   apt clean
 
@@ -33,9 +36,6 @@ WORKDIR /usr/src/goestools/build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local && \
   make && \
   make install
-
-#Does removing the cloned repo gain me anything?
-RUN rm -rf /usr/src/goestools
 
 COPY ./entrypoint.sh /usr/bin/entrypoint.sh
 #RUN ["chmod", "+x", "/usr/bin/entrypoint.sh"]
