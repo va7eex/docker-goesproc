@@ -4,8 +4,8 @@ LABEL maintainer="David Rickett"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV TZ=America/Vancouver
-ENV IP_GOESRECV=127.0.0.1
+ENV TZ=America/Vancouver \
+  IP_GOESRECV=127.0.0.1
 
 VOLUME ["/opt/goes"]
 
