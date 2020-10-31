@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM debian:buster
 
 LABEL maintainer="David Rickett"
 
@@ -26,7 +26,7 @@ RUN apt update && apt upgrade -y && \
 #Try to keep modifications to here and below
 
 #RUN git clone --recursive https://github.com/pietern/goestools /usr/src/goestools
-COPY ./lib/goestools/ /usr/src/goestools/
+COPY ./lib/goestools /usr/src/goestools/
 
 WORKDIR /usr/src/goestools
 RUN sed -i 's+\./+/opt/goes/+g' ./share/goesproc-goesr.conf.in && \
